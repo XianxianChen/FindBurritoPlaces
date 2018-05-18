@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PlaceViewController: UIViewController {
 
     let containerView = ContainerView()
     var places = [BurritoPlace]() {
@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         let _ = LocationService.manager.checkForLocationServices()
         
         loadPlaces()
+        
+
     }
 
     func loadPlaces() {
@@ -41,7 +43,7 @@ class ViewController: UIViewController {
     }
 
 }
-extension ViewController: UITableViewDataSource {
+extension PlaceViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.places.count
     }
@@ -60,8 +62,12 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
-extension ViewController: UITableViewDelegate {
+extension PlaceViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 105
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPlace = places[indexPath.row]
+        self.navigationController?.pushViewController(MapViewController(burritoPlace: selectedPlace), animated: true)
     }
 }

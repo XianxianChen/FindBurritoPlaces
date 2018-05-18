@@ -28,9 +28,9 @@ class ContainerView: UIView {
     func setupViews() {
         addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: super.topAnchor).isActive = true
-        tableView.bottomAnchor.constraint(equalTo: super.bottomAnchor).isActive = true
-        tableView.leadingAnchor.constraint(equalTo: super.leadingAnchor).isActive = true
-        tableView.trailingAnchor.constraint(equalTo: super.trailingAnchor).isActive = true
+        tableView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
     }
 }

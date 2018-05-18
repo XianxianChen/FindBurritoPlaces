@@ -19,9 +19,14 @@ struct BurritoPlace: Codable {
     let id: String
     let placeId: String?
      // codingKeys
-    private enum codingKeys: String, CodingKey {
+     enum CodingKeys: String, CodingKey {
+        case geometry = "geometry"
+        case name = "name"
         case priceLevel = "price_level"
+        case vicinity = "vicinity"
+        case id = "id"
         case placeId = "place_id"
+        
     }
 }
 struct Geometry: Codable {

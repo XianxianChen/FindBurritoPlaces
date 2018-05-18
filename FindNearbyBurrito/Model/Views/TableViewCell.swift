@@ -10,8 +10,7 @@ import UIKit
 class TableViewCell: UITableViewCell {
     lazy var containerView: UIView = {
        let v = UIView()
-        v.layer.shadowOpacity = 5
-        v.layer.shadowColor = UIColor.lightGray.cgColor
+        v.backgroundColor = .white
         return v
     }()
     lazy var stackView: UIView = {
@@ -20,6 +19,22 @@ class TableViewCell: UITableViewCell {
     }()
     lazy var titleLabel: UILabel = {
         let lab = UILabel()
+//        family: Helvetica Neue
+//        name: HelveticaNeue-UltraLightItalic
+//        name: HelveticaNeue-Medium
+//        name: HelveticaNeue-MediumItalic
+//        name: HelveticaNeue-UltraLight
+//        name: HelveticaNeue-Italic
+//        name: HelveticaNeue-Light
+//        name: HelveticaNeue-ThinItalic
+//        name: HelveticaNeue-LightItalic
+//        name: HelveticaNeue-Bold
+//        name: HelveticaNeue-Thin
+//        name: HelveticaNeue-CondensedBlack
+//        name: HelveticaNeue
+//        name: HelveticaNeue-CondensedBold
+//        name: HelveticaNeue-BoldItalic
+        lab.font = UIFont(name: "HelveticaNeue-Bold", size: 35)
         return lab
     }()
     lazy var addressLabel: UILabel = {
@@ -45,14 +60,15 @@ class TableViewCell: UITableViewCell {
     }
     func commonInit() {
      setupViews()
+     self.backgroundColor = UIColor(displayP3Red: 239/255, green: 236/255, blue: 236/255, alpha: 1)
     }
     func setupViews() {
         addSubview(containerView)
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        containerView.topAnchor.constraint(equalTo: super.topAnchor, constant: 8).isActive = true
-        containerView.bottomAnchor.constraint(equalTo: super.bottomAnchor, constant: -8).isActive = true
-        containerView.leadingAnchor.constraint(equalTo: super.leadingAnchor, constant: 8).isActive = true
-        containerView.trailingAnchor.constraint(equalTo: super.trailingAnchor, constant: -8).isActive = true
+        containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
+        containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8).isActive = true
         
         containerView.addSubview(stackView)
         containerView.addSubview(button)
@@ -62,16 +78,16 @@ class TableViewCell: UITableViewCell {
         
         // set button constraints
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.centerYAnchor.constraint(equalTo: super.centerYAnchor).isActive = true
+        button.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
         button.widthAnchor.constraint(equalToConstant: 25).isActive = true
         button.trailingAnchor.constraint(equalTo: super.trailingAnchor).isActive = true
         button.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         // set stackView constraints
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.topAnchor.constraint(equalTo: super.topAnchor, constant: 8).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: super.bottomAnchor, constant: -8).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: super.leadingAnchor, constant: -10).isActive = true
+        stackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 8).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -8).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10).isActive = true
         stackView.trailingAnchor.constraint(equalTo: button.leadingAnchor).isActive = true
         
         // set labels constraints
