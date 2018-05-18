@@ -15,6 +15,9 @@
 		8168C4F520ADE4A70039125F /* FindNearbyBurritoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C4F420ADE4A70039125F /* FindNearbyBurritoTests.swift */; };
 		8168C50020ADE4A70039125F /* FindNearbyBurritoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C4FF20ADE4A70039125F /* FindNearbyBurritoUITests.swift */; };
 		8168C50E20ADE4C00039125F /* BurritoPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C50D20ADE4C00039125F /* BurritoPlace.swift */; };
+		8168C51920AE37B90039125F /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C51820AE37B90039125F /* NetworkHelper.swift */; };
+		8168C52120AE3D620039125F /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C52020AE3D620039125F /* ContainerView.swift */; };
+		8168C52320AE3F560039125F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C52220AE3F560039125F /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		8168C4FF20ADE4A70039125F /* FindNearbyBurritoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNearbyBurritoUITests.swift; sourceTree = "<group>"; };
 		8168C50120ADE4A70039125F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8168C50D20ADE4C00039125F /* BurritoPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BurritoPlace.swift; sourceTree = "<group>"; };
+		8168C51820AE37B90039125F /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		8168C52020AE3D620039125F /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		8168C52220AE3F560039125F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +85,6 @@
 		8168C4D320ADE4A40039125F = {
 			isa = PBXGroup;
 			children = (
-				8168C50D20ADE4C00039125F /* BurritoPlace.swift */,
 				8168C4DE20ADE4A40039125F /* FindNearbyBurrito */,
 				8168C4F320ADE4A70039125F /* FindNearbyBurritoTests */,
 				8168C4FE20ADE4A70039125F /* FindNearbyBurritoUITests */,
@@ -100,11 +105,11 @@
 		8168C4DE20ADE4A40039125F /* FindNearbyBurrito */ = {
 			isa = PBXGroup;
 			children = (
-				8168C4DF20ADE4A40039125F /* AppDelegate.swift */,
+				8168C51720AE37920039125F /* SupportingFiles */,
 				8168C4E120ADE4A40039125F /* ViewController.swift */,
+				8168C51A20AE39DC0039125F /* Model */,
 				8168C4E320ADE4A40039125F /* Main.storyboard */,
 				8168C4E620ADE4A70039125F /* Assets.xcassets */,
-				8168C4E820ADE4A70039125F /* LaunchScreen.storyboard */,
 				8168C4EB20ADE4A70039125F /* Info.plist */,
 			);
 			path = FindNearbyBurrito;
@@ -126,6 +131,34 @@
 				8168C50120ADE4A70039125F /* Info.plist */,
 			);
 			path = FindNearbyBurritoUITests;
+			sourceTree = "<group>";
+		};
+		8168C51720AE37920039125F /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				8168C4DF20ADE4A40039125F /* AppDelegate.swift */,
+				8168C4E820ADE4A70039125F /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		8168C51A20AE39DC0039125F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8168C51820AE37B90039125F /* NetworkHelper.swift */,
+				8168C50D20ADE4C00039125F /* BurritoPlace.swift */,
+				8168C51D20AE3C150039125F /* Views */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8168C51D20AE3C150039125F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8168C52020AE3D620039125F /* ContainerView.swift */,
+				8168C52220AE3F560039125F /* TableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8168C52120AE3D620039125F /* ContainerView.swift in Sources */,
+				8168C51920AE37B90039125F /* NetworkHelper.swift in Sources */,
 				8168C4E220ADE4A40039125F /* ViewController.swift in Sources */,
+				8168C52320AE3F560039125F /* TableViewCell.swift in Sources */,
 				8168C50E20ADE4C00039125F /* BurritoPlace.swift in Sources */,
 				8168C4E020ADE4A40039125F /* AppDelegate.swift in Sources */,
 			);
