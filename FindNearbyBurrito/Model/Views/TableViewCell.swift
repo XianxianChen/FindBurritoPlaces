@@ -37,14 +37,14 @@ class TableViewCell: UITableViewCell {
     }()
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: "burritoCell")
-        
+        commonInit()
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
+        commonInit()
     }
     func commonInit() {
-        
+     setupViews()
     }
     func setupViews() {
         addSubview(containerView)
@@ -61,6 +61,7 @@ class TableViewCell: UITableViewCell {
         stackView.addSubview(infoLabel)
         
         // set button constraints
+        button.translatesAutoresizingMaskIntoConstraints = false
         button.centerYAnchor.constraint(equalTo: super.centerYAnchor).isActive = true
         button.widthAnchor.constraint(equalToConstant: 25).isActive = true
         button.trailingAnchor.constraint(equalTo: super.trailingAnchor).isActive = true
@@ -74,16 +75,19 @@ class TableViewCell: UITableViewCell {
         stackView.trailingAnchor.constraint(equalTo: button.leadingAnchor).isActive = true
         
         // set labels constraints
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: stackView.topAnchor).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
         titleLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
+        addressLabel.translatesAutoresizingMaskIntoConstraints = false
         addressLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 0).isActive = true
         addressLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
         addressLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
         addressLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
+        infoLabel.translatesAutoresizingMaskIntoConstraints = false
         infoLabel.topAnchor.constraint(equalTo: addressLabel.bottomAnchor, constant: 0).isActive = true
         infoLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
         infoLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true

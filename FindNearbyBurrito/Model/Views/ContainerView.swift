@@ -11,7 +11,7 @@ class ContainerView: UIView {
     
     lazy var tableView: UITableView = {
         let tv = UITableView()
-        tv.register(UITableViewCell.self, forCellReuseIdentifier: "burritoCell")
+        tv.register(TableViewCell.self, forCellReuseIdentifier: "burritoCell")
         return tv
     }()
     override init(frame: CGRect) {

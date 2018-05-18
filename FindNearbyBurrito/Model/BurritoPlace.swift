@@ -14,10 +14,10 @@ struct InfoList: Codable {
 struct BurritoPlace: Codable {
     let geometry: Geometry
     let name: String
-    let priceLevel: Int
+    let priceLevel: Int?
     let vicinity: String
     let id: String
-    let placeId: String
+    let placeId: String?
      // codingKeys
     private enum codingKeys: String, CodingKey {
         case priceLevel = "price_level"
@@ -36,20 +36,20 @@ class BurritoPlaceAPIClient {
     static let manager = BurritoPlaceAPIClient()
     private init() {}
     private var apiKey = "AIzaSyBZw4iifCIJsmuIUWN6o6tRCXO_dhkKAM0"
-    private func getBurritoPlaces(lat: Double, lng: Double, completionHandler: @escaping ([BurritoPlace]) -> Void, errorHandler: @escaping (Error) -> Void) {
+    func getBurritoPlaces(lat: Double, lng: Double, completionHandler: @escaping ([BurritoPlace]) -> Void, errorHandler: @escaping (Error) -> Void) {
         
     let urlStr = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat),\(lng)&radius=1500&type=restaurant&keyword=burrito&key=\(apiKey)"
         let completion: (Data) -> Void = {(data: Data) in
             do {
-            let places = try JSONDecoder().decode([BurritoPlace].self, from: data)
+            let onlineInfo = try JSONDecoder().decode(InfoList.self, from: data)
+            let places = onlineInfo.results
             completionHandler(places)
             } catch {
-                errorHandler(error)
+              print(error)
             }
             
         }
         NetworkHelper.manager.performDataTask(urlStr: urlStr, completionHandler: completion, errorHandler: errorHandler)
-        
     }
 }
 

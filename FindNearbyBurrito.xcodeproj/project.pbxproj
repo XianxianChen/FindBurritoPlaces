@@ -18,6 +18,8 @@
 		8168C51920AE37B90039125F /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C51820AE37B90039125F /* NetworkHelper.swift */; };
 		8168C52120AE3D620039125F /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C52020AE3D620039125F /* ContainerView.swift */; };
 		8168C52320AE3F560039125F /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C52220AE3F560039125F /* TableViewCell.swift */; };
+		8168C52520AE8E2A0039125F /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C52420AE8E2A0039125F /* LocationService.swift */; };
+		8168C52720AE8EB40039125F /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8168C52620AE8EB40039125F /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		8168C51820AE37B90039125F /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		8168C52020AE3D620039125F /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		8168C52220AE3F560039125F /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		8168C52420AE8E2A0039125F /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		8168C52620AE8EB40039125F /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 			children = (
 				8168C51820AE37B90039125F /* NetworkHelper.swift */,
 				8168C50D20ADE4C00039125F /* BurritoPlace.swift */,
+				8168C52420AE8E2A0039125F /* LocationService.swift */,
+				8168C52620AE8EB40039125F /* UserDefaults.swift */,
 				8168C51D20AE3C150039125F /* Views */,
 			);
 			path = Model;
@@ -292,9 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8168C52520AE8E2A0039125F /* LocationService.swift in Sources */,
 				8168C52120AE3D620039125F /* ContainerView.swift in Sources */,
 				8168C51920AE37B90039125F /* NetworkHelper.swift in Sources */,
 				8168C4E220ADE4A40039125F /* ViewController.swift in Sources */,
+				8168C52720AE8EB40039125F /* UserDefaults.swift in Sources */,
 				8168C52320AE3F560039125F /* TableViewCell.swift in Sources */,
 				8168C50E20ADE4C00039125F /* BurritoPlace.swift in Sources */,
 				8168C4E020ADE4A40039125F /* AppDelegate.swift in Sources */,
