@@ -60,7 +60,7 @@ private func commonInit() {
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor).isActive = true
         nameLabel.widthAnchor.constraint(equalTo: self.safeAreaLayoutGuide.widthAnchor).isActive = true
-        nameLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        nameLabel.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
     }
     

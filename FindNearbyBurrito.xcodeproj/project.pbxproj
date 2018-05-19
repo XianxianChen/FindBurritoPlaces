@@ -116,7 +116,6 @@
 				8168C51720AE37920039125F /* SupportingFiles */,
 				8168C52C20AF48290039125F /* View Controllers */,
 				8168C51A20AE39DC0039125F /* Model */,
-				8168C4E320ADE4A40039125F /* Main.storyboard */,
 				8168C4E620ADE4A70039125F /* Assets.xcassets */,
 				8168C4EB20ADE4A70039125F /* Info.plist */,
 			);
@@ -145,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				8168C4DF20ADE4A40039125F /* AppDelegate.swift */,
+				8168C4E320ADE4A40039125F /* Main.storyboard */,
 				8168C4E820ADE4A70039125F /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;

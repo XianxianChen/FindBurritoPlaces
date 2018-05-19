@@ -31,7 +31,7 @@ class PlaceViewController: UIViewController {
         
 
     }
-
+    // get burrito places from user's current location
     func loadPlaces() {
         let lat = UserDefaultsHelper.manager.getLatitude()
         let lng = UserDefaultsHelper.manager.getLongitude()

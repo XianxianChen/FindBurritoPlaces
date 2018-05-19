@@ -25,7 +25,6 @@ class LocationService: NSObject {
     
     static let manager = LocationService()
     
-    
     private var locationManager: CLLocationManager!
 }
 

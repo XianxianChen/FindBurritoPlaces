@@ -74,8 +74,7 @@ extension MapViewController: MKMapViewDelegate {
           // while MKMarkerAnnotationView always comes with a default red Balloon.
             annotationView?.canShowCallout = true
             annotationView?.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-//            annotationView?.glyphImage = nil
-            annotationView?.image = #imageLiteral(resourceName: "Pin")
+            annotationView?.image = #imageLiteral(resourceName: "Pin") 
             
         } else {
             annotationView?.annotation = annotation
