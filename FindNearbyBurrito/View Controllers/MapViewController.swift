@@ -21,7 +21,6 @@ class MapViewController: UIViewController {
         configureAnnotation()
         setupInfoLabel()
         self.placeView.mapView.delegate = self
-        let _ = LocationService.manager.checkForLocationServices()
     }
     // a burritoPlace is required when initialize the ViewController
     init (burritoPlace: BurritoPlace) {
@@ -34,13 +33,14 @@ class MapViewController: UIViewController {
     }
     func setupInfoLabel() {
         self.navigationItem.title = self.burritoPlace.name
+        let address = self.burritoPlace.vicinity.components(separatedBy: ",")
+        
+        self.placeView.nameLabel.text =  address[0]
         var priceLev = ""
         if let price = burritoPlace.priceLevel {
             for _ in 0...price {
                 priceLev = priceLev + "$"
             }
-            let address = self.burritoPlace.vicinity.components(separatedBy: ",")
-            
             self.placeView.nameLabel.text =  address[0] + " " + priceLev
         }
     }

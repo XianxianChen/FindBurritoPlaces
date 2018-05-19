@@ -26,7 +26,7 @@ class PlaceViewController: UIViewController {
         containerView.tableView.delegate = self
         containerView.tableView.dataSource = self
         // ask user for permition to access location
-        
+           let _ = LocationService.manager.checkForLocationServices()
         loadPlaces()
         
 
