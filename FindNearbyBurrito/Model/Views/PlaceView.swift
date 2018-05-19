@@ -22,6 +22,13 @@ lazy var userTrackingButton: MKUserTrackingButton = {
 }()
     lazy var nameLabel: UILabel = {
         let lab = UILabel()
+        lab.backgroundColor = .white
+        lab.layer.cornerRadius = 10
+        lab.backgroundColor = UIColor(displayP3Red: 127/255, green: 0, blue: 255/255, alpha: 1)
+        lab.font = UIFont(name: "HelveticaNeue-Bold", size: 20)
+        lab.textColor = .white
+        lab.layer.masksToBounds = true
+        lab.textAlignment = .center
         return lab
     }()
 

@@ -11,6 +11,7 @@ class TableViewCell: UITableViewCell {
     lazy var containerView: UIView = {
        let v = UIView()
         v.backgroundColor = .white
+        v.layer.cornerRadius = 10
         return v
     }()
     lazy var stackView: UIView = {
@@ -19,22 +20,8 @@ class TableViewCell: UITableViewCell {
     }()
     lazy var titleLabel: UILabel = {
         let lab = UILabel()
-//        family: Helvetica Neue
-//        name: HelveticaNeue-UltraLightItalic
-//        name: HelveticaNeue-Medium
-//        name: HelveticaNeue-MediumItalic
-//        name: HelveticaNeue-UltraLight
-//        name: HelveticaNeue-Italic
-//        name: HelveticaNeue-Light
-//        name: HelveticaNeue-ThinItalic
-//        name: HelveticaNeue-LightItalic
-//        name: HelveticaNeue-Bold
-//        name: HelveticaNeue-Thin
-//        name: HelveticaNeue-CondensedBlack
-//        name: HelveticaNeue
-//        name: HelveticaNeue-CondensedBold
-//        name: HelveticaNeue-BoldItalic
-        lab.font = UIFont(name: "HelveticaNeue-Bold", size: 35)
+        lab.textColor = UIColor(displayP3Red: 127/255, green: 0, blue: 255/255, alpha: 1)
+        lab.font = UIFont(name: "HelveticaNeue-Bold", size: 28)
         return lab
     }()
     lazy var addressLabel: UILabel = {
